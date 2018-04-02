@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="allbrower.js" ></script>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="button"  id="btn" value="click" />
+		<a href="http://chenjieweb.top" id='blog'>blog</a>
+		<script>
+			var btn=document.getElementById('btn');
+			EventUtil.addHandlder(btn,'click',function(event){
+			event=EventUtil.getEvent(event);
+			var Target=EventUtil.getTarget(event);
+			alert(Target.tagName);
+			});
+			var blog=document.getElementById('blog');
+			blog.onclick=function(event){
+			event=EventUtil.getEvent(event);
+			EventUtil.preventDefault(event);
+			};
+		</script>
+	</body>
+</html>

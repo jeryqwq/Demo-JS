@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var str='{"name":"chenjie","age":20,"hobby":"code"}';
+			JSON.parse(str,fun);
+			function fun(name,value){
+				console.log(name+':'+value);
+				return value;
+			}
+
+		</script>
+	</body>
+</html>

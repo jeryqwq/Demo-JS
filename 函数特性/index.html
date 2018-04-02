@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+// 	var a= function(a,b){
+// 		var arr=new Array(a,b);
+// 		var arr1=[];
+// function jia1(c){
+// return c+1;
+// 	}
+// 	for(var i=0;i<arr.length;i++){
+// 		arr1[i]=jia1(arr[i]);
+// 	}
+// 	return arr1;
+
+// }
+//回调函数
+//function addone(a){
+//	return a+1;
+//}
+//function test(a,b,c,callback){
+//var arr=[];
+//for(var i=0;i<3;i++){
+//	arr[i]=callback(arguments[i]);
+//}
+//return arr;
+//}
+////alert(test(3,4,5));
+//console.log(test(4,5,6,addone));
+//console.log(test(4,5,6,function(a){return a+2;}));
+//自调用函数，适合初始化变量，只能执行一次，避免全局变量污染
+//(function(a,b){
+//	console.log(a*b) ;
+//	return 0;
+//})(4,5);\
+//var obj=new Object();//直接new一个object类型
+//obj.name='chenjie';
+//obj.age=20;
+//obj1={//使用键值对方式创建
+// name:'chenjie',
+// age:20
+//}
+//function Student(name,age){//通过构造函数
+//	this.name=name;
+//	this.age=age;
+//}
+//var stu=new Student('chenjie',20);
+//var obj3=Object.create({name:'chenjie',age:20});//通过create创建
+//console.log(obj3.name);
+//console.log(obj3 instanceof Object);//类型比较
+//var stu1=Object.create(null);//创建一个没有任何东西且无任何属性的对象
+////console.log(stu1.toString());//不支持此方法
+//var person={
+//	name:"chenjie",
+//	age:20,
+//	sex:'nan',
+//	hobby:'code',
+//};
+//var key='hobby';//可以通过类名.属性名或者类名['']来获得属性名，如果不确定具体的变量名也可通过类名[中级变量]来获取
+//console.log(person[key]);
+//for(var i in person){
+//	console.log(i);
+//} 
+//function base(){};//如果有此属性，则hasownproperty为true
+//var base=Object.create({q:5});//hasownproperty为false,此方法创建的base继承于一个有q属性的类，所以q变量并不是base本身的属性，而是他proptotype的
+////base.prototype.z=3;
+//base.x=1;
+//base.y=2;
+////var son=new base();
+////console.log(son.z.toString);//js中的prototype相当于java的extends，子类如果没有查到此属性则默认查找父类的
+//console.log('x' in base);
+//console.log(base.hasOwnProperty('q'));
+
+
+//var stu=function(){};
+//var stu1=Object.create(null);
+//stu2={};//这三个是相等的层次
+
+//数据的四个属性   writable是否可写 默认true  Enumerable是否可枚举  configurable是否可配置-删除，重新定义等   value 包含的就是具体的值
+//存储器属性 get，set
+//var  stu={
+//	age:20,
+//	name:'chen',
+//	hobby:'music'
+//	
+//}
+//console.log(stu.propertyIsEnumerable('age'));//return true 可枚举型
+//console.log(Object.getOwnPropertyNames(stu));//返回所有属性，包括不可枚举和可枚举
+//console.log(Object.keys(stu));//返回所有可枚举的属性名
+
+//如何设置属性的描述值，枚举。可写，可配置，value
+//var  stu={
+//	age:20,
+//	name:'chen',
+//	hobby:'music'
+//}
+//Object.defineProperty(stu,'age',{
+//	value:200,
+//	writable:true,//是否可写
+//	enumerable:false,//是否可枚举
+//	configurable:true//可配置
+//});
+//stu.age=5999999;
+//console.log(stu.age);
+//console.log(Object.keys(stu))//key和in都只显示可枚举的属性，故返回值没有age;
+//console.log(Object.getOwnPropertyNames(stu));//返回所有属性，包括不可枚举
+
+
+
+//var  stu={
+//	age:20,
+//	name:'chen',
+//	hobby:'music'
+//}
+//Object.defineProperty(stu,'age',{
+//	value:24,
+//	wirtable:true,
+//	enumerable:true,
+//	configurable:false//如果为true，下面的输出就为underfind，补课配置就代表不可删除，不可修改配置
+//});
+//stu.age=25;
+//delete stu.age;
+//console.log(stu.age)
+//Object.defineProperty(stu,'age',{//相当于修改改属性
+//	writable:false,
+//});
+//stu.age=67;
+//console.log(stu.age);
+//console.log(stu.propertyIsEnumerable('age'));
+
+</script>
+</body>
+</html>

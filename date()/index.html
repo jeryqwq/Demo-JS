@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+//			stu={};//使用DefinProperties批量处理对象的属性描述
+//			Object.defineProperties(stu,{
+//				'age':{
+//					value:function(){
+//						return 5;
+//					},
+//					writable:false,
+//					enumerable:false,
+//					configurable:false,
+//				},
+//				'name':{
+//					value:window,
+//					wrriable:true,
+//					enmuerable:true,
+//					configurable:true
+//				}
+//				
+//			});
+//			console.log(stu.name);
+//			console.log(Object.getOwnPropertyDescriptor(stu,'age'));//打印出age的所有属性包括继承下来的属性
+			
+			var time=new Date();
+			//console.log(time);
+			 time=new Date(5645645645611);//世界协调时1970年一月一日0点0分所经过的毫秒数
+			//console.log(time);
+			time=new Date(2017,7,7); 
+			//console.log(time); 
+			console.log(Date.now());
+			console.log(Date.parse('Fri, 07 Jul 2017 08:33:16 GMT'));
+			console.log(Date.UTC(2017,07,07,0,0,0))
+			console.log(time.getDate());
+			console.log(time.getDay());
+			console.log(time.getHours());
+			console.log(time.getTime());
+			console.log(time.setFullYear(2000));
+			console.log(time);
+		</script>
+	</body>
+</html>

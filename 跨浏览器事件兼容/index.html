@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script  src="EventUtil.js"></script>
+	</head>
+	<body>
+		<input  type="button" id='btn' value="click!" />
+		<input type="button"  id="btn1" value="remove" />
+		<script>
+			var btn=document.getElementById('btn');
+			var btn1=document.getElementById('btn1');
+			EventUtil.addHandlder(btn,'click',test); 
+			EventUtil.addHandlder(btn1,'click',test1); 
+function test(){
+	alert('clicked');
+}
+		function test1(){
+			EventUtil.removerHanlder(btn,'click',test);
+		}
+		</script>
+		
+	</body>
+</html>

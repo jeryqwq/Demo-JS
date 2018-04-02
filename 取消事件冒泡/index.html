@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>event</title>
+	</head>
+	<body>
+		<!--<input type="button" value="test" />
+		<input type="button" id='btn1' value="test" />-->
+		<div id ='box' style="width: 100px;height: 50px;background-color: #333333;">
+			<input type="button" id='btn' value=" btn in Div" />
+		</div> 
+		<script type='text/javascript'>
+//			function test(){
+//				alert('this is a test!内联模式');
+//			};
+//			var btn1=document.getElementById('btn1');
+//          //btn1.onclick=test;//Dom1模型
+//btn1.onclick=function(e){
+//	var e=e||window.event;//IE 制定的事自己的标准，浏览器兼容处理
+//	alert(e.toString());
+//}
+
+//事件冒泡 和捕获
+var btn=document.getElementById('btn');
+var box=document.getElementById('box');
+btn.onclick=function(e){
+	alert('btn.clicked!');//向外延伸btn-bix-body-documentElement
+	var e=e||window.event;
+		if(typeof e.cancelBubble=='undefined'){//判断是否是IE浏览器，是的话使用IE的语法取消事件冒泡
+			e.cancelBubble=true;//
+		}else{
+				e.stopPropagation();//w3c取消冒泡
+			}
+	
+
+}
+box.onclick=function(e){
+	alert('box.clicked!');//向外延伸bix-body-documentElement
+}
+document.body.onclick=function(e){
+	alert('body.clicked!');
+}
+document.documentElement.onclick=function(e){
+	alert('documentElement.clicked!');
+}
+//button - div - html-document
+
+
+
+
+		</script>
+	</body>
+</html>

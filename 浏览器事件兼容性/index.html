@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id='box' style="background: #000000;">
+		<input type="button" value='clicked' id='btn1' />
+		</div>
+		<script>//addEventListener第三个参数为true是捕获阶段--从外至内   false为冒泡阶段，内到外
+			var btn1=document.getElementById('btn1');
+			var box=document.getElementById('box');
+			btn1.addEventListener('click',function(e){
+				alert('btn clicked!');
+				if(typeof e.cancelBubble=='undefined'){//判断是否是IE浏览器，是的话使用IE的语法取消事件冒泡
+			e.cancelBubble=true;//
+		}else{
+				e.stopPropagation();//w3c取消冒泡
+		};
+			btn1.removeEventListener('click',function(){},false);//此方法无法被移除，必须传递与原方法一样的函数事件，匿名函数等无法移除
+			},false);
+			box.addEventListener('click',function(){
+				alert('box clicked');
+			},false);
+			document.body.addEventListener('click',function(){
+				
+				alert('body clicked!');
+			},false);
+			document.documentElement.addEventListener('click',function(){
+				alert('html clicked');
+				
+			},false);
+			document.addEventListener('click',function(){
+				alert('document clicked!');
+			});
+		
+		</script>
+	</body>
+</html>

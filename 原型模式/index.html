@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>原型模式</title>
+</head>
+<body>
+<script type="text/javascript">
+	function Person(){};
+	Person.prototype.name='CJ';
+	Person.prototype.age=20;
+	Person.prototype.job='Fornt Developer';
+	Person.prototype.sayname=function(){
+		alert('Hello,My name is '+this.name);
+	}
+	person1=new Person();
+	person1.name='cj1';
+	//delete person1.name;
+	//alert(Object.getPrototypeOf(person1)==Person.prototype);
+	//person1.sayname();
+	//alert(Person.prototype.constructor==Person);//true
+// alert(person1.hasOwnProperty('name'));//检测对象本身是否有此属性或方法
+
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<!--
+<input type="email" placeholder="请输入内容" name="asdq">
+<input type="url" name="qwe">
+<input type="range" name="">
+<input type="color" name="">
+<input type="date" placeholder="日期选择" name="">
+<input type="datetime" name="">
+<input type="serch" name="">
+<input type="text" autofocus="autofocus" placeholder="自动获得焦点" name="">
+<input type="email" placeholder="www" name="">
+<input type="text" placeholder="为填入内容不允许提交表单" required="required" name=""> -->
+<!-- required 提醒   placeholder提示文字 autocomplete是否提示浏览器开启自动输入提示
+autofocus 获得焦点
+-->
+<form method="post" action="/post/form">
+	<fieldset id="info_box">
+	<legend>项目信息</legend>
+	<ol>
+	<li>
+	<label for="name">姓名：</label>
+		<input required autocomplete="off" placeholder="请输入姓名" class="wenben" type="text" name="name" >
+		</li>
+			<li>
+	<label for="range">优先级</label>
+<input  class="wenben"  type="range" name="range" min="0" max="10" value="5" >
+		</li>
+		<li>
+			<label for="hopetime">预期工期:</label>
+			<input placeholder="请输入预期工期" class="wenben"  type="datetime" name="hopetime">
+		</li>
+			<li>
+			<label for="begintime">开始日期:</label>
+			<input class="wenben"  type="date" name="begintime" value="2017-07-03">
+		</li>
+				<li>
+			<label for="email">Email地址:</label>
+			<input class="wenben"  type="email" name="email" placeholder="请输入邮箱地址" >
+		</li>
+<li>
+	<label  for="url">URL</label>
+	<input class="wenben"  type="url" name="url" placeholder="请输入URL">
+</li>
+<li>
+	<label for="color">项目标识色：</label>
+	<input type="color" name="color" class="wenben" placeholder="请选择颜色" >
+</li>
+<li>
+	<label for="pwd">请输入密码:</label>
+	<input required type="password" name="pwd" placeholder="请输入8-10个字符" pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[/W]).*$" title="请输入至少八位且至少有一个字母数字">
+</li>
+		<li>
+			<input class="wenben"  type="submit" name="">
+		</li>
+		</ol>
+	</fieldset>
+</form>
+<style type="text/css">
+ol{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+ol li{
+	clear: both;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+label{
+	float: left;
+	width: 120px;
+}
+input{
+border:  1.2px solid #333;
+}
+input:focus{
+	background-color:#fff3f1;
+	border:  2px solid #333;
+}
+</style>
+</body>
+</html>

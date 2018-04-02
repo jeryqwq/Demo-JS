@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			Array.prototype.uniqie=function(array){ 
+var n = {}, r = [], len = array.length, val, type; 
+for (var i = 0; i < array.length; i++) { 
+val = array[i]; 
+type = typeof val; 
+if (!n[val]) { 
+n[val] = [type]; 
+r.push(val); 
+} else if (n[val].indexOf(type) < 0) { 
+n[val].push(type); 
+r.push(val); 
+} 
+} 
+return r; 
+};
+// 思路：获取没重复的最右一值放入新数组 
+function unique5(array){ 
+var r = []; 
+for(var i = 0, l = array.length; i < l; i++) { 
+ for(var j = i + 1; j < l; j++) 
+  if (array[i] === array[j]) j = ++i; 
+ r.push(array[i]); 
+ } 
+ return r; 
+};
+////////////////////////////////////////////////////
+function unique1(array){ 
+var n = []; //一个新的临时数组 
+//遍历当前数组 
+for(var i = 0; i < array.length; i++){ 
+//如果当前数组的第i已经保存进了临时数组，那么跳过， 
+//否则把当前项push到临时数组里面 
+if (n.indexOf(array[i]) == -1) n.push(array[i]); 
+} 
+return n; 
+}
+
+
+
+			var arr=[5,2,2,5];
+			console.log(arr.uniqie(arr));
+function Person(){
+	this.say=function(){
+		console.log('Hello!!!');
+	}
+}
+			
+
+var p2=new Person();
+console.log(p2.constructor.prototype.constructor.prototype.constructor)
+		Person.prototype={
+			hair:true,
+		}
+		var p1=new Person();
+		</script>
+	</body>
+</html>

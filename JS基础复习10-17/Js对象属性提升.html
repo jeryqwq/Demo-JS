@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			var person=function(){ 
+//				name:'person'
+//			};
+//			var chenjie=new person();
+//			 console.log(person.__proto__);
+//			 console.log(chenjie.__proto__);
+//			 console.log(person.prototype);
+//			 console.log(chenjie.prototype);
+//		 console.log(person.constructor);
+//		 console.log(chenjie.constructor);
+//		 person.prototype.age=21;
+//	console.log(chenjie.age)
+function person(name){
+	this.name=name,
+	this.say=function(){
+		alert('hello');
+	}
+}
+person.prototype={
+	age:21,
+	names:'chen'
+}
+var p1=new person();
+console.log(p1.age);
+person.say();
+		</script>
+	</body>
+</html>

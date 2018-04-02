@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function test(x,y,z){
+			return x+y-z;
+			};
+			function returner(){
+				return returner.caller;
+			};
+			function call(){
+				return returner();
+			}
+				console.log(test.constructor);
+				console.log(test.length);
+				console.log(call());
+				function test2(){
+					return arguments;
+				}
+				console.log( test2(5,6));
+				
+			(	function (count){
+					if(count<=3){
+					//alert(count);
+					arguments.callee(++count);
+					}
+				}
+			)(0);
+			
+			(function(count){
+				if(count<=3){
+					alert(count);
+					arguments.callee(++count);
+				}
+			})(0);
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			
+//			var obj ={
+//				name:'Hello',
+//				childobj:{}
+//			};
+//			
+//			Object.defineProperty(obj,'name',{
+//				value:'hello',
+//				configable:false,
+//				wirtable:false,
+//				enumerable:false
+//			})
+//			Object.seal(obj);//seal方法可将对象变为不可扩展且不可配置，就是对象里的configable等于false
+//console.log(Object.isSealed(obj));//检测对象是否已经被封闭
+//Object.preventExtensions(obj);
+//			console.log(Object.isExtensible(obj))//isExtendsible检测对象是否可扩展
+//Object.freeze(obj);//冻结对象，无法做任何更改
+//		console.log(Object.isFrozen(obj));
+//		console.log(Object.getOwnPropertyDescriptor(obj,'name'))
+//		function deepFreeze(obj){
+//			var prop,propKey;
+//			Object.freeze(obj);
+//			for(propKey in obj){
+//				prop=obj[propKey];
+//				if(!obj.hasOwnProperty(prop)||!(typeof(obj)==="object")||Object.isFrozen(prop)){
+//					continue;
+//				}
+//				deepFreeze(prop);
+//			}
+//		};//深度冻结  
+//	var obj2={
+//		internal:{
+//			
+//		}
+//	}
+//		deepFreeze(obj2);
+//		obj2.internal.x=20;
+		var obj={
+			x:1,
+			y:50
+		}
+		
+		Object.freeze(obj);//浅冻结
+		console.log(Object.isExtensible(obj));
+		answer=Object.isFrozen(Object);//false
+		console.log(Object.preventExtensions(obj));
+		</script>
+	</body>
+</html>

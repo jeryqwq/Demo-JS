@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			function C(){
+				this.name='chen'
+			};
+			function P(){
+				this.age=20 
+			};
+			var res;
+//			C.prototype=P.prototype;
+//			C.prototype.xx='xx';
+//			var c1=new C();
+//			res=c1 instanceof P;
+//			c1.xx='xx';
+//			var  p1=new P();
+//			res=c1.xx;
+			
+			
+//			C.prototype=new P();
+//			C.prototype.xx='xx';
+//			c1=new C();
+//			p1=new P();
+//			res=c1.age;
+
+
+//
+//C.prototype=Object.create(P.prototype);
+//c1=new C();//c1 insatancof C P 都为true
+//p1=new P();//而p1 instanceof C则返回的是false 
+//res=p1 instanceof C;
+
+ function Person(){	}
+ Person.prototype.headCount=1;
+ Person.prototype.eat=function(){console.log('eating....');}
+function Programmer(){}
+Programmer.prototype=Object.create(Person.prototype);
+Programmer.prototype.constructor=Programmer;
+Programmer.prototype.language='javascript';
+Programmer.prototype.makeCode=function(){
+	console.log('I am Codding by'+this.language);
+}
+var java=new Programmer();
+java.language='java';
+java.makeCode();
+java.eat();
+		//	console.log(res);
+		</script>
+	</body>
+</html>

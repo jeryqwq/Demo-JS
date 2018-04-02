@@ -1,0 +1,129 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>JS特殊的函数</title>
+</head>
+<body>
+<script type="text/javascript">
+// 	function a(a1){
+// var b= function (b1){
+// return b1+10;
+// };
+// return '在A里面调用的结果为'+ b(10);
+// 	};
+
+// console.log(a(10));
+
+// function a(){
+// 	alert( 'aaa');
+// 	a=function (){
+// 		alert('bbb');
+// 	};
+// }
+// a();
+// a();
+/*
+var a= function(){
+	function setup (){
+		var setup='Dosomething';
+	
+	}
+	function doWhat(){
+			alert('初始化完成');	
+		}
+	setup();
+	return doWhat;
+}();
+a();
+// setup();
+// console.log(do);*/
+// var func=new Function('a','b','retrun a+b;');
+// alert (func(1,2));
+//作用域链
+// var a=1;
+// function test(){
+// 	var b=2;
+// 	return a;
+// }
+// test();
+// alert(b);
+//var a=function(param){
+//         var n= function (){
+//     return  param;
+//          }
+//          param++;
+//          return n;
+// }
+// var test=a(123);
+// alert(test());
+//  var obj ={};
+//  console.log(Object.isExtensible(obj));//对象的可扩展性
+// var time=new Date();
+//  console.log(Object.isExtensible(time));
+// var obj=new Object();
+//  console.log(Object.preventExtensions(obj));//成为不可扩展
+// var chen={
+// name:'chenjie',
+// age:20,
+// class:'1502'
+
+// };
+// chen.x=10;
+
+// Object.seal(chen);//设置为不可扩展，不能添加新属性，可通过Object.isSealed()检测
+// delete chen.x;
+// console.log(chen);
+// Object.freeze(chen);//无法做任何修改和配置,将对象冻结.浅冻结，子对象无法实现冻结
+// function deepFreeze(obj){
+// var prop,propKey;
+// Object.freeze(obj);
+// for(propKey  in obj)
+// 	prop=obj[propKey];
+// if(!obj.hasOwnProperty(propKey)||!(typeof prop==='object')||Object.isFrozen(prop)){
+// 	continue;
+// }
+// deepFreeze(prop);
+// }
+// }
+// var obj2={
+// 	internal:{}
+// };
+// deepFreeze(obj2);
+// obj2.internal.x=1;
+// console.log(obj2.internal.x);
+var dead=function(){
+	console.log('no foot ,no money,no life, no everything!');
+}
+var health=function(){
+	console.log('health,happness,handsome,lovely,bouncy!');
+}
+var sleep={
+	time,
+	doSomethingBefore,
+	isPleased,
+	controlYourMind,
+	talkProper,
+    thankfulToAround,
+    function(time){if (time> 22:30) {dead}}，
+    function(time){{if (time<22:30) {health}},
+}
+Object.Freeze(sleep);
+sleep.time=22:00;
+doSomethingBefors='listen to music!';
+isPleased=true;
+contorYourMind=true;
+talkProper=false;
+thankfulToAround=true;
+while(true){
+	health;
+}
+alert(sleep.time);
+
+
+</script>
+
+
+</body>
+</html>

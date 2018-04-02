@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type='text/javascript'>
+//			try{
+//				//errfun();
+//				throw new Error('手动抛出错误！！！');
+//			}catch(e){
+//				//TODO handle the exception
+//				console.log(e.toString());
+//			}finally{
+//				
+//			}
+			
+			
+//			try{
+//				
+//				errfun();
+//			}catch(e){
+//				try{
+//				if(e instanceof EvalError){
+//					alert ('EvalError错误');
+//				}
+//				if(e instanceof DOMError){
+//					alert('FileError错误');
+//				}
+////				if(e.instanceof FileError){
+////					alert('FileError错误！');
+////				}
+////				if(e.instanceof RangeError){
+////					alert('RangeError错误');
+////				};
+//				}
+//				catch(a){
+//					console.log(a.toString());
+//				}
+//
+//			
+//			}
+			
+			 
+			 
+			 //自定义错误处理
+//			 function MyError(val){
+//			 	this.type='error';
+//			 	this.msg=val||'发生了一个不可预知的错误！！！';
+//			 } 
+//			 MyError.prototype=Object.create(Error.prototype);
+//			 MyError.prototype.constructor=MyError;
+//			 try{
+//			 	throw new MyError();
+//			 }catch(e){
+//			 	console.log(e.type+e.msg)
+//			 }
+
+
+var stu={//对象引用绑定，值向同一个值
+	age:20
+}
+var stu1=stu;
+stu1.age=15;
+console.log(stu.age);
+var stu2={
+	age:20
+}
+console.log(stu==stu2);//比较比的是是否指向同一个对象
+console.log(stu.age==stu2.age);//比较的是具体的值
+
+
+
+
+
+
+
+		</script>
+	</body>
+</html>

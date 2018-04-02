@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input id="username" type="text" placeholder="请输入值"/>
+		<h3 id="showview"></h3>
+		
+<script>
+	var obj={};
+Object.defineProperty(obj,"username",{
+	get:function(){
+		console.log("inited");
+	},
+	set:function(val){
+		console.log("seted by"+val);
+		document.getElementById("username").value=val;
+		document.getElementById("showview").textContent="文本框内的值为："+val;
+	}
+});
+	document.getElementById("username").addEventListener("keyup",function(){
+		obj.username=this.value;
+	})
+
+</script>
+	</body>
+</html>

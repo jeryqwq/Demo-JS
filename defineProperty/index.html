@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us"> 
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type='text/javascript'>
+//			var stu={
+//				age:20,
+//				name:'chen',
+//			}
+//			Object.defineProperty(stu,'age',{
+//				value:25,
+//				/** 如果不写其参数默认还有
+//				 * configurable:false,
+//				 * writable:false
+//				 * enumerable:false
+//				 * 
+//				 * 
+//				 * **/
+//			});
+//			var stu1={
+//				//__proto__:null,//不继承上一级任何属性
+//				value:0,
+//			}
+//			//console.log(stu1.toSting());//报错，没有继承Object的toString方法
+//			Object.defineProperty(stu1,'value',{
+//				value:20,
+//				writable:false,
+//				configurable:false,
+//				enumerable:true,
+//				
+//			});
+//			stu1.value=2;
+//			console.log(stu1.value);
+//			Object.defineProperty(stu1,'value',{//报错 Cannot redefine property: value"
+//				writable:true,//congigurable为false时，writable属性可从true到false，但是不能从false到true
+//			})
+//			stu1.value=23;
+//			console.log(stu1.value)
+			
+			
+			
+//			//get set  为未定义的属性提供一个返回值
+//			var person={
+//				name:'chen',
+//				age:20,
+//				get sex(){
+//					return 'nan';//get方法
+//				},
+//				set sex(sex){
+//				console.log('can not set this value!');//设置set方法
+//				}
+//			}
+//			console.log(person.sex);
+//			person.sex='2';
+//			
+			
+			//自定义求圆周长，说实话比java简单多了
+//		var 	Circle={
+//			r:0,
+//			get 'area'(){//注意：此处get和set方法不加冒号
+//				return this.r*this.r*Math.PI;
+//			},
+//			set changR(r){
+//				this.r=r;
+//			}
+//		}
+//		Circle.changR=10;
+////			console.log(Circle.area);
+//			Object.defineProperty(Circle,'zhouchang',{//此处方法需要添加冒号
+//				get:function(){
+//					return this.r*2*Math.PI;
+//				},
+//			})
+//			console.log(Circle.zhouchang);
+//			console.log(Object.keys(Circle));
+//			
+//			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>JS基本操作之数组和其他特性</title>
+	</head>
+	<body>
+
+	<script type="text/javascript">
+/**	
+	var num1=25;
+		num3=3;
+var num2=num1 & num3;
+console.log(num1.toString(2));
+console.log(num3.toString(2));
+console.log(num2.toString(2));
+*/
+/**
+//通过Arguments属性自动遍历所有传值的元素，Js不在乎传值的个数，默认作为数组处理
+function sum(){
+	var sum=0;
+	for(var i=0;i<arguments.length;i++){
+sum= sum+arguments[i];
+	}
+	return sum;
+}
+
+alert(sum(1,2,2,3,456456,454,4564,8))*/
+/**
+JS语言中并没有提供重载机制，但我们可以通过传值数组的个数来模拟重载
+function copyReload(){
+		if(arguments.length==1){
+		return'this is the one value!';
+	}
+	if(arguments.length==2){
+		return'this is the two value!';
+	}
+}
+alert(copyReload(11,0));
+*/
+/**
+在函数中实例化的object为局部变量，运行后销毁，所以无法覆盖
+function setName(obj){
+obj.name='chen';
+obj=new Object();
+obj.name='jie';
+}
+var obj=new Object;
+setName(obj);
+alert(obj.name);*/
+/**
+typeof 可用于显示他的数据类型，instanceof 用于类型之间的比较，返回布尔型对象；
+var a=1;
+var b='2';
+var c=false;
+var d=null;
+var e;
+var p=new Object();
+console.log(typeof a);
+console.log(typeof b);
+console.log(typeof c);
+console.log(typeof d);
+console.log(typeof e);
+console.log(typeof p);
+console.log(c instanceof Object);
+console.log(a instanceof RegExp);
+*/
+/**
+var color='blue';
+function changColor(color){
+	if(color=='blue'){
+		color='yellow';
+		return color;
+	}else{
+		color='red';
+		return color;
+	}
+
+}
+	alert(changColor(color));
+*/
+/**
+
+//push 推入新数组，下标从原数组的最后一个开始推进，pop获取数组最后一个元素，并删除；相反的shift获得第一项的值并删除:unshift用于在数组前端添加任意多个元素
+var array=new Array(1,2,3,4,5);
+var newarr=array.push(6);
+array[array.length]=7;
+console.log(array);
+var item=array.pop();
+console.log(item);
+console.log(array);
+item1=array.shift();
+console.log(array);
+array.unshift(8,9);
+console.log(array);
+console.log(array.reverse());//倒叙输出
+console.log(array.sort());
+console.log(array.concat(10,11,12,[13,14]));//在当前数组新添加元素
+array=array.concat(10,11,12,[13,14]);
+console.log(array.splice(1,10));//从下标一取10个
+array3=new Array(1,2,3,4,5,6);
+array3.splice(1,1,12,15);//从第几个开始删除几个元素插入的值
+console.log(array3);//
+*/
+/*
+归并方法的使用
+var arrays=new Array(1,2,3,4,5);
+console.log(array.indexOf(0,2));.//返回要查找项的下标
+var sum=arrays.reduce(function (prev,cur,index,array){//第一次执行回调函数归并方法prev=1，cur=2，第二次prev是3（2+1）cer=3（数组的第三项）
+//console.log(prev);
+	console.log(array);
+
+	return prev+cur;
+
+});
+var sum2=arrays.reduceRight(function (prev,cur,index,array){
+//console.log(prev);
+	console.log(array);
+
+	return prev+cur;
+
+});
+alert(sum2);
+*/
+
+
+	</script>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -19,9 +19,24 @@
 //const a=3;
 //console.log(a);
 //}}}
-let [a,b,c]=[1,2,3];
-
-
+//let [a,b,c]=[1,2,3];//解构赋值
+//  let show= function(...args) {
+// 	 console.log(args)
+// }
+// show(12,23,34,3)//普通事件的argments不是数组，通过三点可以得到一个数组类型的参数并支持数组的所有方法
+// var a=[1,3,6,7]
+// for (const iterator of a) {
+// 	console.log(iterator)//1.2.3.6类似foreach语句中的element对象
+// }
+let map=new Map();
+map.set('a','appale');
+map.set('n','bananna');
+let value=map.get('a');
+console.log(value);//map是一个类似json格式的类型
+map.delete('a')
+for (const i of map) {
+	console.log(i)//使用forin无法便利map对象，for of很好的解决了map对象的遍历或递归，forof不能对json进行操作
+}
 </script>
 </body>
 </html>

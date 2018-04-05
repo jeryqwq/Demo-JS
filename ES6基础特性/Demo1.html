@@ -28,15 +28,39 @@
 // for (const iterator of a) {
 // 	console.log(iterator)//1.2.3.6类似foreach语句中的element对象
 // }
-let map=new Map();
-map.set('a','appale');
-map.set('n','bananna');
-let value=map.get('a');
-console.log(value);//map是一个类似json格式的类型
-map.delete('a')
-for (const i of map) {
-	console.log(i)//使用forin无法便利map对象，for of很好的解决了map对象的遍历或递归，forof不能对json进行操作
-}
+
+
+// ------------------------------------------------
+// let map=new Map();
+// map.set('a','appale');
+// map.set('n','bananna');
+// let value=map.get('a');
+// console.log(value);//map是一个类似json格式的类型
+// map.delete('a')
+// for (const i of map) {
+// 	console.log(i)//使用forin无法便利map对象，for of很好的解决了map对象的遍历或递归，forof不能对json进行操作
+// }
+
+
+// ------------------------------------------------
+// class person{
+// 	constructor(name,age){
+// this.name=name;
+// this.age=age
+// 	}
+// 	say(){
+// alert('hello');
+// 	}
+// }
+// let p1=new person('cj',21);
+// // console.log(p1.name)
+// class worker extends person{//ES6中的继承
+
+// }
+// console.log(worker.name);
+// worker.prototype=new person('12',20);//ES5中的继承
+// console.log(worker.name)
+
 </script>
 </body>
 </html>

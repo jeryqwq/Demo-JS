@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="SendAjax" id='btn' />
+    <script>
+        //     const ajax=(url,success,fail)=>{//封装Ajax方法
+        // var oAjax=new XMLHttpRequest();
+        // oAjax.open('get',url,true);
+        // oAjax.onload=()=>{
+        //     if(oAjax.readyState==4 && oAjax.status==200){
+        //         success(oAjax.responseText);
+        //     }else{
+        //         fail(oAjax.status);
+        //     }
+        // }
+        //     }
+        // window.onload=()=>{
+        // document.getElementById('btn').addEventListener('click',()=>{
+        //     ajax('/traceur.js',(res)=>{//请用Hbuild或者ws编辑器，轻量级的只是在浏览器中打开本地文件，而不是搭建服务器访问
+        //             console.log(res);
+        //         },(res)=>{
+        // console.log(res)
+        //         })
+        // })
+        // }
+        //--------------------------------------
+
+
+        // let p1=new Promise((reslove,reject)=>{
+        // setTimeout(reslove,500,'1');
+        // })
+        // var p2=new Promise((reslove,reject)=>{
+        //     setTimeout(reslove,400,'2');
+        // });
+        // Promise.race([p1,p2]).then((value)=>{//race，当多个任务取得一个结果时优先竞速制
+        // console.log(value)
+        // })
+        //-----------------------------------
+
+        // Promise.reject('is a wrong info').then((res) => {
+        //     console.log(res);
+        // },(res)=>{
+        //     console.log(res);// is a wrong info
+        // })
+        // //同理
+        // Promise.resolve('is a true info').then((res) => {
+        //     console.log(res);
+        // },(res)=>{
+        //     console.log(res);// is a true info
+        // })
+
+        //----------------------------------
+        // let p1= Promise.resolve(3);
+        // let p2= Promise.resolve(p1);
+        // p2.then((value)=>{
+        //     console.log(value);//引用promise
+        // })
+        //-----------------
+
+
+        //Generator 生成器
+        //  show=()=>{
+        //     yield '1';
+        //     yield 2;
+        //     yield 3;
+        //     yield 4;
+        //    return 'Done';
+        // }
+        // var res=show();
+
+        //-----------------------json格式语法
+        // var json={
+        //     *show(){
+        //            yield '1';
+        //     yield 2;
+        //     yield 3;
+        //     yield 4;
+        //    return 'Done';
+        //     }
+        // }
+        // var res=json.show();
+       
+        console.log(res.next());//Object {value: "1", done: false}
+        console.log(res.next());//Object {value: 2, done: false}
+        console.log(res.next());//Object {value: 3, done: false}
+        console.log(res.next());//Object {value: 4, done: false}
+        console.log(res.next());//Object {value: undefined, done: true}//done代表是否便利完毕
+        console.log(res.next());
+    </script>
+</body>
+
+</html>

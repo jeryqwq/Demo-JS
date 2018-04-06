@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //     //------create方法
+    // Function.prototype.construct=(aArgs)=>{
+    //     let oNew=Object.create(this.prototype);
+    //     this.apply(oNew,aArgs);
+    //     return oNew;
+    // }
+    // // ------  __proto__方法
+    // Function.prototype.construct=(aArgs)=>{
+    //    let nNew={};
+    //    oNew.__proto__=this.prototype;
+    //     this.apply(oNew,aArgs);
+    //     return oNew;
+    // }
+    //------ 使用Function 构造器
+//     Function.prototype.construct=(aArgs)=>{
+// var NewFunc=new Function('');
+// NewFunc.prototype=this.prototype;
+// var oNew=new NewFunc();
+// this.apply(NewFunc,aArgs);
+// return oNew;
+//     }
+/* min/max number in an array */
+// var numbers = [5, 6, 2, 3, 7];
+
+// /* using Math.min/Math.max apply */
+// var max = Math.max.apply(null, numbers); /* This about equal to Math.max(numbers[0], ...) or Math.max(5, 6, ..) */
+// var min = Math.min.apply(null, numbers);
+// console.log(max)
+// /* vs. simple loop based algorithm */
+// max = -Infinity, min = +Infinity;
+// for (var i = 0; i < numbers.length; i++) {
+//   if (numbers[i] > max)
+//     max = numbers[i];
+//   if (numbers[i] < min) 
+//     min = numbers[i];
+// }
+// function minOfArray(arr) {
+//   var min = Infinity;
+//   var QUANTUM = 32768;
+
+//   for (var i = 0, len = arr.length; i < len; i += QUANTUM) {
+//     var submin = Math.min.apply(null, arr.slice(i, Math.min(i + QUANTUM, len)));
+//     console.log( arr.slice(i, Math.min(i + QUANTUM, len)))
+//     min = Math.min(submin, min);
+//     console.log(min)
+//   }
+
+//   return min;
+// }
+
+// var min = minOfArray([5, 6, 2, 3, 7,8,54,888,999,457]);
+// console.log(min)
+
+
+
+
+
+    
+    </script>
+</body>
+</html>

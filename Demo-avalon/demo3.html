@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="avalon.js"></script>
+	</head>
+	  <script>
+            avalon.filters.title = function (obj, a, b) {
+                var title = obj.title
+                var newTitle = avalon.filters.truncate(title, a, b)
+                obj.title = newTitle
+                return obj
+            }
+            var vm = avalon.define({
+                $id: 'test',
+                el: '123456789qwert'
+            })
+
+        </script>
+	  <body ms-controller="test">
+        <div ms-attr="{title:@el} | title(10,'...')">333</div>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+	<head>
+		
+	</head>
+	<body>
+		<script>
+				var o={
+					 age:22
+				}
+	function setSetter (obj, key, code) {
+  Object.defineProperty(obj, key, {
+    enumerable: true,
+    configurable: true,
+    set:function(val){ 
+    	code() 
+    }
+  })
+}
+			setSetter(o,'age',function(val){
+		
+			})
+		</script>
+		
+	</body>
+</html>

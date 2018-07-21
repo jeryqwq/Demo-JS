@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+				<script src="ajax.js"></script>
+
+	</head>
+	<body>
+		<table width="100%" cellpadding="0" cellspacing="0">
+                        <tbody><tr>
+                            <th height="42">姓名</th>
+
+                            <td id="name">群*</td>
+
+                        </tr>
+                        <tr>
+                            <th>标题</th>
+
+                            <td id="title"></td>
+
+                        </tr>
+                        <tr>
+                            <th>内容</th>
+
+                            <td id="text"></td>
+
+                        </tr>
+                        <tr>
+                            <th>咨询时间</th>
+
+                            <td id="time"></td>
+
+                        </tr>
+                        <tr style="display: none;">
+                            <th>处理情况</th>
+                            <td id="reslove" ></td>
+                        </tr>
+                        <tr>
+                            <th>回复时间</th>
+                            <td id="restime">2018-06-21</td>
+                        </tr>
+                        <tr>
+                            <th class="borno">回复内容</th>
+                            <td class="jgfk_bg_l3 borno">
+                                <!--repeat33960968691--><p><!--html270069047042--><span style="color:#A7A7A7;font-family:微软雅黑;background-color:#FFFFFF;">不属于政府信息公开范畴，此平台只受理政府信息公开的意见和建议，其他问题请通过相关渠道反映。</span><!--html270069047042:end--></p><!--repeat33960968691--><!--repeat33960968691:end-->
+                            </td>
+                        </tr>
+
+                    </tbody></table>
+	</body>
+	<script>
+		var arr=window.location.search.split("?");
+		var keyvalue=arr[1].split("=");
+
+		Ajax.get("detail"+keyvalue[1]+".json",function(res){
+		var data = eval ("(" + res + ")");
+			if(data.success==true){
+				$("#name").innerText=data.letter.sender
+				$("#title").innerText=data.letter.title
+				$("#text").innerText=data.letter.content
+				$("#time").innerText=data.letter.postTime
+				$("#restime").innerText=data.letter.lastTime
+			}
+		})
+		
+	</script>
+</html>

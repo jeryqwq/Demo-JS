@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--<h2 onclick="o2.say()">事件方式改变this指向</h2>-->
+		<script>
+			var o={};
+			Object.defineProperty(o,'names',{
+				value:[1,2,3],
+				writable:true,
+				set:function(val){
+					bvalue=val
+					console.log(bvalue)
+				}
+			})
+			console.log(o.names)
+			
+			
+//			var a=[{name:'cj',age:22},{name:'cj2',age:21}]
+//			a.map(function(item,index){
+//				console.log(item)
+//			})
+//			
+//			var o={
+//				name:'cj'
+//			}
+//			function created(o){
+//				 var i;
+//				 function F(){};
+//				 F.prototype=o;
+//				 i=new F();
+//				 return i;
+//			}
+//			var o1=created(o);
+//			console.log(o1.name)
+			
+			
+			
+			//改变this指向，相当于java的super（）
+//			function Parent(){
+//				this.name='cj',
+//				this.age=22
+//			}
+//			function Child(){
+//				Parent.call(this);
+//				this.like='reading'
+//			}
+//var o1=new Child(); 
+//console.log(o1.age)
+			
+			
+			
+			//深拷贝
+//		 var o={
+//		 name:'这是符合规定的名称',
+//		desc:'这是一个符合规定的描述和详情内容，不信你可以数一数。',
+//		authors:['李明','李明1','李明2','李明3','李明4','李明5','李明6','李明7'],
+//		ajaxData:{
+//			status:0,
+//			msg:'返回成功',
+//			data:{
+//				
+//			}
+//		}
+//		 }
+//		var oed={age:22}  
+//		function deepExtend(o,oed){
+//			for (item in o){
+//				if(typeof o[item]==='object'){ 
+//					oed[item]=o[item].constructor===Array?[]:{};
+//					console.log(oed[item])
+//					deepExtend(o[item],oed[item])
+//					
+//				}else{
+//					oed[item]=o[item]
+//				}
+//			}
+//			return oed;
+//		}
+//		var o1=deepExtend(o,oed);
+//		var o2=deepExtend(o,oed);
+//		o.home.address='sahnghai';
+//		console.log(o2.home.address)
+
+
+
+//		function deepExtend(o,oed){
+//			var oed=oed||{};
+//			for(item in oed){
+//				if(typeof oed[item]==='object'){
+//					console.log(oed[item])
+//					o[item]=(oed[item].constructor===Array)?[]:{};
+//					this.deepExtend(o[item],oed[item]);
+//				}else{
+//					o[item]=oed[item];
+//				}
+////				return o
+//				
+//			}
+//		}
+//		var o1= deepExtend(oed,o)
+//		var o2=deepExtend(oed,o)
+//		console.log(o1.home.address)
+//			var o={
+//				name:'cj',
+//				age:22,
+//				home:{
+//					postnum:350000,
+//					address:'fuzhou'
+//				}
+//			}
+//			var oed={
+//				like:'reading'
+//			}
+//			function extend(o,oed){
+//				for(item in oed ){
+//					o[item]=oed[item]//浅拷贝
+//				}
+//			}
+//			
+//			extend(oed,o);
+//			console.log(oed.home.address)
+//			o.home.postnum=3500002
+//			
+//			console.log(oed.home.postnum)//指向home的一个引用
+			
+//			function O(name){
+//				var self=this;//获取到this
+//				this.name=name;
+//				function o(){
+//					console.log(self.name)//输出this.name
+//				}
+//				this.say=function(){
+//					o.call(this)
+//				}
+//			}
+//			var o2=new O('cj');
+			
+//			function O(name){
+//				this.name=name;
+//				var age=22;//私有变量
+//				var o=function (){//私有方法
+//					console.log(this.name)
+//				} 
+//				this.say=function(){
+//					console.log('test')
+//					o.call(this);//this指向O
+//				}
+//				
+//			} 
+//			var o1=new O('cj');
+//			o1.say();
+		</script>
+	</body>
+</html>

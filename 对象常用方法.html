@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+
+<body>
+
+	<script>
+		//			var book={
+		////				_year:2004,
+		////				edition:1
+		//			};
+
+		//			book.__defineGetter__("year",function(){
+		//				return this._year;
+		//			})
+		//			book.__defineSetter__("year",function(newValue){
+		//				if(newValue>=this._year){
+		//					this._year=newValue;
+		//					this.edition+=1
+		//					return this.edition;
+		//				}else{
+		//					return 2000;
+		//				}
+		//			})
+		//			book.year=2000
+		//			Object.defineProperties(book,{
+		//				_year:{
+		//					value:2018
+		//				},
+		//				edition:{
+		//					value:1
+		//				},
+		//				year:{
+		//					get:function(){
+		//						return this._year;
+		//					},
+		//					set:function(newVaule){
+		//						if(newVaule>2004){
+		//							this._year=newVaule;
+		//							this.edition=5;
+		//							console.log(this.edition)
+		//						}
+		//					} 
+		//				},
+		//			})
+		//			var description=Object.getOwnPropertyDescriptor(book,"_year");
+		//			console.log(description)
+		//			console.log(description.value)
+		//			console.log(description.enumerable)
+		//			
+
+		// function Person(age,name){
+		//	this.name=name
+		//	this.age=age
+		//} 
+		//var person =new Person(22,"cj");
+		//console.log(person instanceof Person)
+		//console.log(person instanceof Object)
+		//var o=new Object();
+		//Person.call(o,21,"cj");
+		//console.log(Person.prototype.constructor);
+		//person.prototype=new Person();
+		//console.log(Person.prototype);
+		//console.log(person.prototype);
+		//console.log(Object.prototype);
+		//console.log(Person.prototype.isPrototypeOf(person))
+		//console.log(person.prototype)
+		//console.log(Object.getPrototypeOf(person));
+		//console.log(person.prototype)
+		//delete o.name;
+		//Object.getOwnPropertyNames(person);//["name", "age", "prototype"]
+		//function Person(){
+		//	this.name='main'
+		//	this.sayName=function(){
+		//		alert(this.name)
+		//	}
+		//}
+		//var friend=new Person();
+		//Person.prototype={
+		//	constructor:Person,
+		//	name:"Nicholas",
+		//	age:27,
+		//	sayName:function(){
+		//		alert(this.name)
+		//	}
+		//}
+		//friend.name;
+
+		//
+		//String.prototype.abc=function(text){
+		//	console.log(123)
+		//	return text+'return';
+		//}
+		//var str="123"
+	let	Person=(name,age) => {
+this.name=name;
+this.age=age;
+		}
+		Person.prototype={
+			job:'frontEnd developer'
+		}
+		var person1=new Person("cj",21)
+		var person2=new Person('cj2',21)
+person1.name="cj3";
+console.log(person1.name);
+console.log(person2.job)
+	</script>
+</body>
+
+</html>

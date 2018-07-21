@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h2>1</h2>
+		<h2>2</h2>
+		<h2>3</h2>
+		 
+		<script>
+		
+		function f(){
+			var b=11;
+			return function f1(){
+				console.log(a)
+			}
+		}
+		a=11;
+		f()()
+		
+		
+//			var a=function(){
+//					var x=2
+//				var f=new Function('','alert(x)')();	//该方式创建的函数内部词法作用域指向window对象，并不是父级的scope
+//			}()
+		
+			
+			
+//			var f=function(){
+//				console.log(1)
+//			}()支持自调用
+
+//			console.log(a)//undefined
+//			console.log(b)//undefined
+////			console.log(c)//c is not defined
+////			console.log(d)//d is not defined1
+//			var a=10;
+//			if(false){
+//				var b=2
+//			}else{
+//				 c=3
+//			}
+//			function f(){
+//				d=4;
+//			}
+			
+			
+			
+			
+//			var arr=document.getElementsByTagName('h2')
+//			for (var i=0;i<arr.length;i++){
+//				arr[i].onclick=(function(i){
+//					return function(){
+//						console.log(i+1)
+//					}
+//				})(i)
+//			}
+//			(function(){
+//				window.func=new Function("a","console.log(a)");
+//				 
+//				 func.a=5;
+//			}())
+//			func(2)		 
+//			func();
+//var Person=function(){
+//	this.name=123;
+//}
+//var Person={
+//	age:30,
+//	name:'陈杰',
+//}
+//
+//var person=Object.create(Person);
+//
+//console.log(Person.prototype.isPrototypeOf(person))
+//console.log()
+
+
+
+//var Person=function(name){
+//	this.name=name
+//}
+//var A=function(age){
+//	this.age=age
+//}
+//Person.prototype={
+//	age:22,
+//	like:"reading"
+//}
+//var p2=new Person('p2');//原生和prototype都有
+//var p1=Person.prototype//仅拥有prototype内的属性，原Person灭有
+////p1.prototype=Person('p1');
+//var o=new A(22);
+//Person.call(o,'p3')
+////console.log(Person.prototype.isPrototypeOf(p2))//true
+////console.log(p1.name)//underfined 
+//console.log(o.age)
+//var Obj=function(){
+//	this.name="cj";
+//}
+//Obj.prototype.age=22;
+//var obj1=Object.create(Obj.prototype)//新建空对象并将create（）内的属性给空对象
+//console.dir(obj1.__proto__)//用create寄生，使其没有对象的私有方法，仅包含原型里面的方法\
+//var f=function(){
+//	console.log("run")
+//}()
+//function f1(){
+//	function f2(){
+//		d=2;
+//	}
+//	f2();
+//}
+//function func(a,b){
+//	console.log(a,b);//1 function b(){}  预处理遇到同名且在执行代码处以前都没给该变量赋值，还是会预先处理函数，
+//	 b=100;
+//	function b(){
+//		alert();
+//	}
+//		
+//}
+//func(1,2)
+//var f=new func(3,4)
+//function fun1(){
+//	var num=1;
+//	return function(){
+//		num++;
+//		console.log(num)
+//	}
+//}
+//var num=new  fun1();
+//num();
+//num();
+
+		</script>
+	</body>
+</html>

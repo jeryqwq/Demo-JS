@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h3 id="id" >1233</h3>
+		
+	</body>
+	<script>
+//		var mathMethod=function(){
+//			var add=function(a,b){
+//				return a+b;
+//			}
+//			var mod=function(a,b){
+//				return a%b;
+//			}
+//			return{
+//				add:add,
+//				mod:mod
+//			}
+//		}()
+//		var newMethod=function(cal){
+//			cal.jian=function(a1,a2){
+//				return a1-a2;
+//			}
+//			return cal;
+//		}(window.mathMethod||{})
+//		console.log(mathMethod.jian(1,2))
+
+//var oo={
+//	getElmById:function(id){
+//		return document.getElementById(id);
+//	}
+//	
+//	
+//}
+//
+//console.log(oo.getElmById("id"))
+//setTimeout(function(){},0.5)
+//oo.getElmById("id").style.color="red"
+//oo.getElmById("id").style.translate=false
+//function Person(){
+//	this.name="person"
+//}
+//
+//var p=new Person();
+//console.log(p.name)
+//console.log(undefined==null)
+//console.log(Number(undefined))
+//console.log(Boolean(null))
+//console.log(typeof underfined)
+//console.log(Object.prototype.toString.call(new Array));
+//window.$=function(id){
+//	console.log(id);
+//	
+//	return document.getElementById(id);
+//}
+//setTimeout("$('id').style.color='red'",0)
+var cart={
+	name:"laoshilaishi"
+}
+function Person(name){
+	this.name=name;
+	this.cart=cart
+}
+Person.prototype.sayHello=function(){
+		console.log(this.name+"Saying")
+}
+
+var p1=new Person('p1cj');
+p1.name="really Cj";
+//Person.prototype={//重写了prototype
+//	age:3,
+//	sayHello:Person.constructor
+//}
+//Person.prototype.sayHello=function(){
+//	console.log("new hello")
+//}
+var p2=new Person("p2");
+p1.cart.name="cjnew"
+//console.log(Person.prototype)
+//p1.__proto__.name="cj";
+
+//console.log(0==Number(null))
+//p1.__proto__.sayHello()
+var p3=new Person('cj3')
+
+//p3.__proto__.sayHello()
+
+console.log(p2.__proto__)
+	</script>
+</html>

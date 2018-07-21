@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+
+
+//var o={
+//name:'ooo',age:22
+//}
+function Person(name,age){
+	this.name=name;
+	this.age=age;
+}
+function New(){
+	var arr=[];
+	for(var i =0;i<arguments.length;i++){
+		arr[i]=arguments[i]
+	}
+	var o={'__proto__':arguments[0].prototype}
+		eval(arr[0]+".apply(o,arr.splice(1,arr.length-1))")
+		return o;
+}
+var obj=New('Person','12',12);
+var obj1=New ('Person','11',11);
+//var o=new Object()
+//Person.call(o,"cj123",23)
+//console.log(o.name);
+//console.log(o.age);
+//p.call(o,'sadasd',12)
+//console.log(o.name)
+
+
+//			var o={
+//				 name:'cj',
+//				 age:52,
+//				say:function(){
+//					console.log(this.name1)
+//					console.log(this.age)
+//				}
+//			}
+//			function print(name,age){
+//				this.name='sad'
+//				this.age=222
+//				console.log(this.name); 
+//				console.log(this.age); 
+//			}
+//			print.call(o);
+//o.call(print());
+
+
+
+
+
+//print('cj2');			
+//			var f1={
+//				name:'cj',
+//			 	say:function(){
+//					console.log(this.name)
+//				}
+//			}
+//			var o=new Object();
+////			 o.name='cj2'//没有这一句undefined，this指向被调用方o，o里面没有name属性
+//			 o.f2= f1.say;
+////			this.name='cj3' 
+//			o.f2() 
+//				
+			
+//			function Person(name){
+//				this.name=name;
+//				this.age=5
+//			}
+//			
+//			var p=new Person("cj")
+//			Person.prototype.age=22
+//			console.log(p.age);
+//			Person.prototype={age:21}
+//			var p2=new Person('cj2')
+//			console.log(p2.age)
+//			p2.age=3;//属性查找先从自身，后父类，最后原型，undefined
+//			console.log(p2.age);
+//			console.dir(Person.prototype)
+//console.log(p.__proto__.name=3)
+//console.log(p.constructor.prototype.age===Person.prototype.age)
+
+
+
+//			
+//			function Person(aname,aage){
+//				return{
+//					name:aname,
+//				age:aage
+//				}
+//			}
+//			var p1=Person('ck',22);
+//			var p2=Person('as',21);
+//			
+			
+//			var o={
+//				name:"cj"
+//			}
+//			var j=new Object();
+//			j.name='cj'
+////			console.log(o.constructor===j.constructor)
+//			var a=new String("wqeqw");
+//			var b='123'
+//			var n=new Number(4)
+////			console.log(a.constructor===n.constructor)
+////			console.log(o instanceof o.constructor)
+//			console.log(a instanceof a.constructor)
+			
+			
+			
+			
+			
+//			var o=new Object();
+//			Object.defineProperty(o,'name',{
+//				value:'cj',
+//				writable:false,
+//				configratable:false,//不能重新用该方式配置
+//				enumerable:true//枚举，不能用for(XX in Objecj){}遍历，也不能用Object.keys返回的数组获取到
+//			})
+//		Object.defineProperties(o,{
+//			age:{
+//				get:function(){
+//					return 21;
+//				},
+//				set:function(val){
+//					console.log(val)
+//				}
+//			},
+//			like:{
+//				writable:false,
+//				value:'reading.coding'
+//			}
+//		})
+//			console.log(Object.keys(o))
+//console.log(Object.getOwnPropertyDescriptor(o,"name"))
+		</script>
+	</body>
+</html>

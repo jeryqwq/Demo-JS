@@ -9,67 +9,67 @@
 <script type="text/javascript">
 
 
-//工厂模式
-function createPerson(name,age,job){
-	var o=new Object();
-	o.name=name;
-	o.age=age;
-	o.job=job;
-	o.sayname=function(){
-		alert('你好！我是'+name+'我今年'+age+'我的工作是'+job);
-	}
-	return o;
-}
- var person1= createPerson('CJ','20','前端工程师');
-  var person2= createPerson('CJ1','201','前端工程师1');
-  //alert(person2 instanceof Object);//True
-  // alert(person1.constructor==Object);//True
-    alert(person1.constructor==createPerson);//flase
-//  person1.sayname();
-
-
-
-
-构造函数模式
- function Person(name,age,job){
-
-	this.name=name;
-	this.age=age;
-	this.job=job;
-	this.sayname=function(){
-		alert('你好！我是'+name+'我今年'+age+'我的工作是'+job);
-	}
-}
- var person1=new Person('CJ','20','前端工程师');
-  var person2=new  Person('CJ1','201','前端工程师1');
-// alert(person2 .constructor== Person);//True
-alert(person2 instanceof Object);//instrace类型检测Object和Person均为True，因为所有类型均是Object的实例
-
-
-
-
-function Person(name,age,job){
-
-	this.name=name;
-	this.age=age;
-	this.job=job;
-	this.sayname=function(){
-		alert('你好！我是'+name+'我今年'+age+'我的工作是'+job);
-	};
-}
-//将构造函数当作函数来使用
-//当作构造函数来使用
- var person1=new Person('CJ','20','前端工程师');
- person1.sayname();
-
- //当作普通函数来调用
- Person('CJ','20','前端工程师');
- window.sayname();
-
- //在另一个对象的作用域中使用
-var o=new Object();
-Person.call(o,'CJ','20','前端工程师');
-o.sayname();
+////工厂模式
+//function createPerson(name,age,job){
+//	var o=new Object();
+//	o.name=name;
+//	o.age=age;
+//	o.job=job;
+//	o.sayname=function(){
+//		alert('你好！我是'+name+'我今年'+age+'我的工作是'+job);
+//	}
+//	return o;
+//}
+// var person1= createPerson('CJ','20','前端工程师');
+//var person2= createPerson('CJ1','201','前端工程师1');
+////alert(person2 instanceof Object);//True
+//// alert(person1.constructor==Object);//True
+//  alert(person1.constructor==createPerson);//flase
+////  person1.sayname();
+//
+//
+//
+//
+//构造函数模式
+// function Person(name,age,job){
+//
+//	this.name=name;
+//	this.age=age;
+//	this.job=job;
+//	this.sayname=function(){
+//		alert('你好！我是'+name+'我今年'+age+'我的工作是'+job);
+//	}
+//}
+// var person1=new Person('CJ','20','前端工程师');
+//var person2=new  Person('CJ1','201','前端工程师1');
+//// alert(person2 .constructor== Person);//True
+//alert(person2 instanceof Object);//instrace类型检测Object和Person均为True，因为所有类型均是Object的实例
+//
+//
+//
+//
+//function Person(name,age,job){
+//
+//	this.name=name;
+//	this.age=age;
+//	this.job=job;
+//	this.sayname=function(){
+//		alert('你好！我是'+name+'我今年'+age+'我的工作是'+job);
+//	};
+//}
+////将构造函数当作函数来使用
+////当作构造函数来使用
+// var person1=new Person('CJ','20','前端工程师');
+// person1.sayname();
+//
+// //当作普通函数来调用
+// Person('CJ','20','前端工程师');
+// window.sayname();
+//
+// //在另一个对象的作用域中使用
+//var o=new Object();
+//Person.call(o,'CJ','20','前端工程师');
+//o.sayname();
 
 
 
@@ -81,13 +81,13 @@ function Person(name,age,job){
 	this.name=name;
 	this.age=age;
 	this.job=job;
-	this.sayname=sayname(name,age,job);
+	this.sayname=sayname;
 }
-function sayname(name,age,job){
-	alert('你好！我是'+name+'我今年'+age+'我的工作是'+job);
-}
+function sayname(){
+	alert('你好！我是'+this.name+'我今年'+this.age+'我的工作是'+this.job);
+} 
 var person1=new Person('CJ','20','前端工程师');
-person1.sayname;
+person1.sayname();
 </script>
 </body>
-</html> -->
+</html> 

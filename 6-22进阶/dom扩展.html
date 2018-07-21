@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	
+	<body>
+		<h3 id="id">123<p>12</p></h3>
+		<h1 class="h1 dis cur">h1-1</h1>
+		<h1 class="h1">h1-2</h1>
+	</body>
+	<script>
+		window.$=function(value){
+			return document.querySelector(value);
+		}
+		window.$All=function(value){
+			return document.querySelectorAll(value);
+		}
+//		console.log($All("h1")[1].style.color="red")
+//      console.log($All("h1")
+//console.log(document.getElementsByClassName("h1"))
+//console.log($("#id").getElementsByTagName("p").style)
+//classNames= $("h1").className.split(/\s+/)
+//for(i in classNames){
+//	if(classNames[i]=="h1"){
+//		classNames[i]="";
+//	}
+//		console.log(classNames[i])
+//}
+//$("h1").className=classNames.join(" ");
+//$("h1").classList.remove("dis");
+//$("h1").classList.add("current");
+//$("h1").classList.toggle("container");
+//$("h1").classList.contains("cur");//监测当前的类名是否存在
+
+
+//console.log($("h1").className) 
+//if(document.readyState=="complete"){
+//	console.log(document.readyState)
+//}
+console.log($("h1").outerHTML)
+
+	</script>
+</html>

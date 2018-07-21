@@ -5,12 +5,48 @@
 		<title></title>
 	</head>
 	<body>
-		
-		
-		<input type="text" value='123' id='chen'/>
-		<script type="text/javascript">
-		console.log(window.chen);
+<h2>1</h2>
+<h2>2</h2>
+<h2>3</h2>
+<script type="text/javascript">
+var doc=document.getElementsByTagName("h2")
+for(var i=0;i<3;i++){
+	doc[i].onclick=(function(i){//闭包传值后形成三个闭包，切值对应不同的i
+		return function(){
+			alert(i)
+		}
+	})(i)
+}
+//function f1(){
+//	var num=1;
+//	function f2(){
+//		alert(num)
+//	}
+//num++;
+//	f2();
+//}
+//f1()//2，闭包内此法作用域的变量存的是外部scope的引用
+
+
+//function f1(){
+//	var num=1;
+//	return function(){
+//		num++;
+//		alert(num)
+//		
+//	}
+//	
+//}
+// var r=new f1();//每一个闭包都是一个独立的作用域，所有值独立存在内部
+//r();//2
+//r();//3
+//new f1()();//2  两个独立的作用
+//new f1()();//2
+
+
+
+
 		</script>
-		
+		 
 	</body>
 </html>

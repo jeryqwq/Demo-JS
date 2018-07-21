@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			function Programer(){
+				
+			}
+			function Person(name,age){
+				this.name=name;
+				this.age=age; 
+			}
+			myExtend(Person,Programer)
+//			Programer.prototype=Object.create(Person.prototype)
+//			Programer.prototype.constructor=Programer;
+			Programer.prototype.language="Javascript"
+			Programer.prototype.codding=function(){
+				console.log('I am codding in' +this.language);
+			}
+			function myExtend(Parent,Son){
+				var o=function(){};
+				o.prototype=Parent.prototype;
+				Son.prototype=new o;
+				Son.prototype.constructor=Son;
+			}
+			var jsCoder=new Programer()	
+			
+//function C(){
+//
+//}
+//C.prototype={
+//		name:'cjC',
+//	age:33
+//}
+//function P(){
+//	this.name='cjP'
+//}
+//P.prototype=Object.create(C.prototype);
+//var p1=new P();
+//console.dir(p1)
+
+
+//			var o={
+//				age:22
+//			} 
+//			function F(){
+//				this.name="cj"
+//			}
+//			var f1=new F();
+//var o1=Object.create(o);
+
+			
+		</script>
+	</body>
+</html>

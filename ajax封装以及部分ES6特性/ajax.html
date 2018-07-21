@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="ajax.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h2 id="title"></h2>
+			<p id="text"></p>
+			<p id="time"></p>
+		</div>
+	</body>
+	<script>
+
+ 
+			Ajax.get("./letter.json",function(res){
+		var data = eval ("(" + res + ")");
+//				var json = strToJson(res); 
+			if(data.success==true){
+			for(index in data.advices){
+				
+				datetime=document.createElement("p");
+				datetime.innerText=data.advices[index].date;
+				title=document.createElement("p");
+				title.innerText=data.advices[index].title;
+				tar=document.createElement("a");
+				tar.setAttribute("href","./total.html?id="+data.advices[index].id)
+			tar.innerText="查看详情"
+				div=document.createElement("div")
+				div.appendChild(tar)
+				div.appendChild(title)
+				div.appendChild(datetime)
+				
+				$("body").appendChild(div)
+				
+			}
+			} 
+		})
+	</script> 
+</html>

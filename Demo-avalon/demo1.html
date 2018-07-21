@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="avalon.js"></script>
+	</head>
+	<body>
+		<div :controller="test">
+			<!--<input :duplex="@name" />-->
+			<ul> 
+			<li :for="($index,el) in @myarr">{{$index}}--{{el}}</li>
+			</ul>
+			<h1>{{@name | truncate(10,'...')}}</h1>
+			<h1>{{@fullName}}</h1>
+			<!--<ms-view></ms-view>-->
+			<!--<ms-button>xxx</ms-button>-->
+			<!--<xmp is="my-component"/></xmp>-->
+			<ms-a></ms-a>
+			<ms-b></ms-b>
+		</div>
+		
+		
+	</body>
+	<script>
+//		var c1, c2
+//avalon.component('ms-a', {
+//  template: "<button :on-click='inc' type='button'>A{{@name}}</button>",
+//  defaults: {
+//  	name:'aasdasdsadsadsadsaasdsadas',
+//  		inc:function(){
+//  		c2.name="a Change"
+//  	},
+//     onInit:function(e){
+//          c1 = e.vmodel
+//      },
+//      buttonText: "button"
+//  }
+//})
+//
+//avalon.component('ms-b', {
+//  template: "<button :on-click='inc' type='button'>B{{@name}}</button>",
+//  defaults: {
+//  	name:'b',
+//  	inc:function(){
+//  		c1.name="b Change"
+//  	},
+//      onInit:function(e){
+//          c2 = e.vmodel
+//      },
+//      buttonText: "button"
+//  }
+//})
+		var vm=avalon.define({
+			$id:"test",
+			name:"qweqweqweqweqwewqeqweqw",
+			firstName:'c',
+			lastName:"j",
+			myarr:[1,2,3,5,8],
+			$computed:{
+				fullName:{
+					get:function(){
+					return this.firstName+" "+this.lastName
+				},
+				set:function(val){
+					var arr=val.split(' ')
+					this.firstName=arr[0];
+					this.lastName=arr[1];
+				}
+				}
+			}
+		});
+		vm.$watch("name",function(a,b){
+			console.log("name",a,b)
+			
+		})
+//		avalon.component('ms-view',{
+//  template:'<div class="view">{{@content}}<slot name="content" /></div>',
+//  defaults: {
+//     content: "123"
+//  }
+//})
+//avalon.component('ms-button', {
+//  template: '<button type="button"><span><slot /></span></button>',
+//  defaults: {
+//      buttonText: "button"
+//  },
+//  soleSlot: 'buttonText'
+//})
+//avalon.component("my-component",{
+//	template:"<div><input type='text' :duplex-number='@num' /> <input type='button' value='++' :on-click='increament' /> </div>",
+//	defaults:{
+//		num:1,
+//		increament:function(){
+//			this.num++;
+//		}
+//	}
+//	
+//	
+//})
+
+//		vm.name="123"
+	</script>
+</html>
